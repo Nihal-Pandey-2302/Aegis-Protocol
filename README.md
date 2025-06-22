@@ -1,61 +1,68 @@
 # 🛡️ Aegis Protocol - Backend
 
-This repository contains the smart contract and off-chain logic for the Aegis Protocol.
+This repository contains the smart contract and off-chain logic for the Aegis Protocol — a decentralized NFT insurance protocol using dynamic pricing powered by Chainlink Functions.
 
 ## Overview
 
-The backend consists of two main components:
+The backend consists of two primary components:
 
-1. **`Aegis.sol`:** A Solidity smart contract responsible for handling user requests, triggering Chainlink Functions, and creating on-chain insurance policies.
-2. **`source.js`:** A JavaScript script that is executed off-chain by the Chainlink DON. It contains the core "AI" logic for fetching live market data and calculating dynamic insurance premiums.
+1. **`AegisV2.sol`**: The Solidity smart contract responsible for managing policy requests, executing insurance creation, and integrating with Chainlink Functions.
+2. **`source.js`**: The JavaScript file executed off-chain by the Chainlink DON, responsible for live market data fetching and premium calculation logic.
 
-## Core Components
+## 🔐 Smart Contract — `AegisV2.sol`
 
-### `Aegis.sol`
+This is the deployed contract used in the final version of the application.
 
-This is the main smart contract for the protocol.
+### Key Functions
 
-* **`createPolicyRequest(...)`**: This function is called by the user to initiate an insurance quote. It packages the NFT details and sends a request to the Chainlink Functions network.
-* **`executePolicy(...)`**: After a quote is received, the user calls this `payable` function, sending the premium amount in ETH. This function creates and stores a new `Policy` struct on-chain.
-* **`fulfillRequest(...)`**: The internal callback function that the Chainlink oracle calls to deliver the calculated premium or any errors.
-* **`getPoliciesByOwner(...)`**: A view function that allows the frontend to query all active policies for a given user.
+- **`createPolicyRequest(...)`**: Initiates an insurance quote by sending NFT details to Chainlink Functions.
+- **`fulfillRequest(...)`**: The callback from the DON that stores the premium once it's computed.
+- **`executePolicy(...)`**: A payable function that finalizes the policy by accepting the premium and saving a `Policy` struct on-chain.
+- **`reportLoss(...)`** / **`claimPolicy(...)`**: Allow users to report a loss or claim their policy payout.
+- **`getPoliciesByOwner(...)`**: Lets the frontend fetch all active policies for a wallet.
 
-**Deployed Address (Sepolia):** `YOUR_FINAL_CONTRACT_ADDRESS`
+**✅ Deployed Contract (Sepolia):**  
+[`0xa155016b9C39F500605F2e459A3335703b7053df`](https://sepolia.etherscan.io/address/0xa155016b9C39F500605F2e459A3335703b7053df)
 
-### `source.js`
+## 🧠 Chainlink Functions Script — `source.js`
 
-This script contains the dynamic pricing algorithm.
+This script contains the protocol’s off-chain dynamic pricing logic.
 
-* **Data Fetching:** It makes a live `GET` request to the Reservoir API (`api.reservoir.tools`) to fetch the target NFT collection's current floor price.
-* **Risk Factors:** It combines the fetched floor price (as a "market factor") with other simulated data (like an "age factor" based on token ID) to create a risk profile.
-* **Fallback Logic:** The script is built to be resilient. If the live API call fails or times out, it gracefully falls back to a simulation model, ensuring the protocol always returns a valid quote.
+### Responsibilities
 
-## Setup
+- **Data Fetching**: Calls the Reservoir API to get current floor price for the NFT’s collection.
+- **Risk Profile Calculation**: Combines floor price with a simulated age-based risk factor.
+- **Fallback Handling**: If the API fails, a default premium is generated to avoid breaking the user flow.
 
-This project uses the Hardhat environment for managing the Chainlink Functions Toolkit.
+This script is referenced directly inside the smart contract's `createPolicyRequest` function call.
 
-1. **Clone and Install:**
+## Setup Instructions
 
-    ```bash
-    git clone [https://github.com/YOUR_USERNAME/aegis-backend.git](https://github.com/YOUR_USERNAME/aegis-backend.git)
-    cd aegis-backend
-    npm install
-    ```
+> ⚙️ Remix was used for deployment and testing. No Hardhat is required unless extending this contract.
 
-2. **Environment:**
-    Create a `.env` file with your `SEPOLIA_RPC_URL` and `PRIVATE_KEY`.
-3. **Test the Off-Chain Script:**
-    You can simulate the `source.js` script locally using the Chainlink Functions Playground or by running Hardhat tasks (if the local environment is fully configured).
+### If testing Chainlink Functions locally:
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/Nihal-Pandey-2302/aegis-backend.git
+   cd aegis-backend
+   ```
+
+2. **Install Dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Simulate source.js (optional)**  
+   You can simulate `source.js` using the [Chainlink Functions Playground](https://functions.chain.link/playground) with test data for easier debugging.
 
 ## Project Repositories
 
-* **Frontend:** `https://github.com/Nihal-Pandey-2302/aegis-frontend`
-* **Backend (Smart Contracts & Logic):** `https://github.com/Nihal-Pandey-2302/aegis-backend`
-
-## Deployed Contract
-
-* **Aegis.sol on Sepolia Etherscan:**
-    `https://sepolia.etherscan.io/address/0xed8a57ff5ED79e9F1803f486C6ad61c16f8ab6D3`
+- **Frontend**: [`aegis-frontend`](https://github.com/Nihal-Pandey-2302/aegis-frontend)
+- **Backend**: [`aegis-backend`](https://github.com/Nihal-Pandey-2302/aegis-backend)
 
 ---
-*This project was built for the [Chromium Hackathon] | June 2025*
+
+**Built with ❤️ for the [Chromium Hackathon] | June 2025**
