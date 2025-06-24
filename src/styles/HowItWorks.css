@@ -1,0 +1,64 @@
+.how-it-works {
+    padding: 3rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+}
+
+.how-it-works h2 {
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+    color: #1e40af;
+    /* Deep blue to evoke trust */
+}
+
+.how-it-works .intro-text {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    color: #444;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.step-card {
+    background: #f0f4ff;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    width: 280px;
+    box-shadow: 0 6px 12px rgb(30 64 175 / 0.15);
+    transition: transform 0.2s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgb(30 64 175 / 0.25);
+}
+
+.step-number {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #2563eb;
+    margin-bottom: 0.75rem;
+}
+
+.step-title {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    color: #1e40af;
+}
+
+.step-description {
+    color: #334155;
+    font-size: 1rem;
+    line-height: 1.5;
+}

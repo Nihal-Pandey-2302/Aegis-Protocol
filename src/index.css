@@ -1,0 +1,158 @@
+/*
+  This is a modern CSS reset. It ensures that all elements
+  behave more predictably across different browsers.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* This is the most important rule. It makes layout math intuitive. */
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  This ensures that the main document, body, and the React root div
+  all take up the full height of the viewport. This is CRITICAL for
+  vertical centering to work correctly.
+*/
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Now we can re-import the Google Font here, as it's a global resource.
+  It's better practice to have it in this global stylesheet.
+*/
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  /* Set the default font for the whole app */
+  background-color: #121212;
+  /* Set the default background for the whole app */
+  color: #e0e0e0;
+  /* Set the default text color */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* At the bottom of layout.css or App.css */
+.wallet-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.08);
+  font-weight: 500;
+}
+
+.wallet-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.copy-icon {
+  transition: color 0.2s;
+  color: #ccc;
+}
+
+.copy-icon.copied {
+  color: #27ae60;
+}
+
+/* ----------------------------- */
+/* 📱 Mobile Responsive Patch 📱 */
+/* ----------------------------- */
+@media (max-width: 768px) {
+
+  /* App Layout */
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .main-app-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .content-wrapper {
+    padding: 1rem;
+  }
+
+  .app-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+
+  .wallet-info {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .connectButton {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  /* NFT Gallery and Policy Cards */
+  .nft-gallery,
+  .policies-list {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+
+  .nft-card img,
+  .policy-card img {
+    height: 140px;
+  }
+
+  .policy-card {
+    padding: 1rem;
+  }
+
+  .policy-info h4 {
+    font-size: 1rem;
+  }
+
+  .policy-actions .btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .hero-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section p {
+    font-size: 0.95rem;
+  }
+
+  .sidebar-stats {
+    padding: 0.75rem;
+  }
+
+  .sidebar-logo {
+    justify-content: center;
+  }
+
+  .logo-image {
+    height: 24px;
+  }
+}
