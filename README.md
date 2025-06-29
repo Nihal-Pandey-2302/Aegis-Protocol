@@ -16,7 +16,7 @@ We have transformed Aegis from a reactive dApp into a **proactive, autonomous ri
 
 -   **New "Autonomous Demo" Video:** **[Watch Aegis automatically detect a potential theft using our new multi-service architecture.](https://your-new-video-link.com)**
 -   **New Upgraded Contract (`AegisV3.sol`):** [View on Sepolia Etherscan - `0xd2Ce8CAb8285EA661ea2C6490f0f8467A39f9673`](https://sepolia.etherscan.io/address/0xd2Ce8CAb8285EA661ea2C6490f0f8467A39f9673)
--   **Chainlink Automation Upkeep:** [View Live Upkeep on Chainlink]([https://automation.chain.link/sepolia/52479038237946955843236239999092429074983281081510323321284537758360662659465](https://automation.chain.link/sepolia/52479053358607414262573789753157733136198557779381457305521613214336204719465))
+-   **Chainlink Automation Upkeep:** [View Live Upkeep on Chainlink](https://automation.chain.link/sepolia/52479038237946955843236239999092429074983281081510323321284537758360662659465)
 
 This new system showcases a powerful synergy between Chainlink's core services and represents the future of truly decentralized, on-chain security.
 
