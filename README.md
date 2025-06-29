@@ -1,3 +1,12 @@
+## 🚀 Post-Submission Progress & Roadmap
+
+Thank you for reviewing our project! The version submitted for the hackathon deadline is stable and fully functional.
+
+Since the submission, our team has continued to build with high velocity. We are actively implementing our future roadmap to address the core challenges of decentralized insurance. You can track our live progress on our **[`develop` branch](https://github.com/Nihal-Pandey-2302/aegis-backend/tree/develop)**.
+
+Our current development sprint focuses on:
+-   **Scaffolding Chainlink Automation:** Building the necessary contract functions to enable automated, time-based policy checks.
+-   **Designing a Fraud-Resistant Claim Model:** Architecting the logic for V3 of our claim system, which will integrate a decentralized arbitration layer to prevent collusion.
 
 
 # 🛡️ Aegis Protocol
