@@ -3,6 +3,7 @@
 // It receives NFT details and an expected owner, then uses an RPC provider
 // to check the current owner of the NFT directly on the blockchain.
 
+
 const nftContractAddress = args[0];
 const tokenId = args[1];
 const expectedOwner = args[2];
