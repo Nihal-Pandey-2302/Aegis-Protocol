@@ -93,39 +93,55 @@ This project is organized into two separate repositories for a clean separation 
 <details>
 <summary>✅ How to Test the Aegis Protocol</summary>
 
-### Testing the V3 Autonomous Sentinel (Recommended)
+To run this project locally:
 
-To see our latest and most advanced features in action, you can interact with the `AegisV3` contract by running our upgraded frontend locally.
+1. **Clone the repository:**
 
-1.  **Get Testnet Assets:** Make sure your wallet is funded with Sepolia ETH and you own at least one testnet NFT. You can use the faucets and minting tools linked below.
-
-2.  **Clone the Frontend Repo:**
     ```bash
-    git clone https://github.com/Nihal-Pandey-2302/aegis-frontend.git
+    git clone (https://github.com/Nihal-Pandey-2302/aegis-frontend)
     cd aegis-frontend
     ```
 
-3.  **Switch to the V3 Branch:**
-    ```bash
-    git checkout v3-upgrade
-    ```
-4.  **Install & Run:**
+2. **Install dependencies:**
+
     ```bash
     npm install
+    ```
+
+3. **Set up environment variables:**
+    Create a `.env` file in the root and add your Alchemy API Key:
+    `VITE_ALCHEMY_API_KEY=YOUR_ALCHEMY_KEY`
+4. **Run the development server:**
+
+    ```bash
     npm run dev
     ```
-5.  Your browser will open `localhost:5173`. Connect your wallet and you can now create policies on our new `AegisV3` contract and witness the autonomous monitoring.
 
-### Testing the Original V2 Demo
+## How to Use the Aegis Demo
 
-You can view the stable, original version of our project (without the autonomous monitoring) via the live link below.
+To test the Aegis Protocol, you will need a wallet funded with Sepolia ETH and at least one NFT on the Sepolia testnet.
 
--   **Original Live Demo:** [https://aegis-frontend-tau.vercel.app/](https://aegis-frontend-tau.vercel.app/)
--   **Original V2 Contract:** [`AegisV2.sol` on Etherscan](https://sepolia.etherscan.io/address/0xa155016b9C39F500605F2e459A3335703b7053df)
+### 1. Get Sepolia ETH
 
-### Required Testnet Resources
--   **ETH Faucet:** [Google Web3 Faucet](https://cloud.google.com/application/web3/faucet) or [Alchemy's Sepolia Faucet](https://www.alchemy.com/faucets/ethereum-sepolia)
--   **NFT Minting Tool:** [Bitbond's Token Tool for Sepolia](https://tokentool.bitbond.com/create-nft/ethereum-sepolia)
+The Sepolia network requires ETH for gas fees. You can get free testnet ETH from a public faucet.
+
+* **Recommended Faucet:**
+- [Google Web3 Faucet](https://cloud.google.com/application/web3/faucet)
+- [Alchemy's Sepolia Faucet](https://www.alchemy.com/faucets/ethereum-sepolia)
+
+### 2. Get a Testnet NFT
+
+Once you have Sepolia ETH, you can mint a free, custom testnet NFT using the Bitbond Token Tool. This tool has a multi-step process.
+
+- **NFT Minting Tool:** [Bitbond's Token Tool for Sepolia](https://tokentool.bitbond.com/create-nft/ethereum-sepolia)
+- **NFT Minting Demo** [https://vimeo.com/1095478830?share=copy](https://vimeo.com/1095478830?share=copy)
+
+- **Instructions:**
+    1. **Create NFT Definition:** First, use the "Create NFT" page to define your NFT (e.g., give it a name like "My Test Asset"). This transaction creates the contract for your NFT collection.
+    2. **Manage Metadata:** After creation, go to the "Manage" section of their tool. Here you can add a picture and other metadata to your NFT definition.
+    3. **Mint the NFT:** Finally, go to the "Mint" section in the NFT minting page by clicking this link on the manage page. Select the NFT you just defined and mint it to your wallet address.
+    4. **Check MetaMask:** After you approve the final minting transaction, the NFT should appear automatically in your MetaMask wallet under the "NFTs" tab. It will then be visible in the Aegis application.
+
 
 </details>
 
