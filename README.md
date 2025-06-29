@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://img.shields.io/badge/V3_Backend-Live_on_Sepolia-brightgreen)](https://sepolia.etherscan.io/address/0x4e50f4aa92132bec49b59ac31bd360840b8a608c)
 [![Project Status](https://img.shields.io/badge/Status-Autonomous_V3_Live-blue)](https://automation.chain.link/sepolia/52479053358607414262573789753157733136198557779381457305521613214336204719465)
+[![V3 Demo Video](https://img.shields.io/badge/V3_Working_and_Proof-green)](https://www.youtube.com/watch?v=mQY3gdAVlv4)
 
 ---
 
@@ -16,6 +17,7 @@ The entire V3 backend system is **live and operational on the Sepolia testnet.**
 
 ### **Irrefutable On-Chain Proof:**
 
+-   **▶️ V3 Working and Proof** : [V3 Upgrades Video](https://www.youtube.com/watch?v=mQY3gdAVlv4)
 -   **V3 Smart Contract (`AegisV3.sol`):** [**`0x4e50...608c`** on Etherscan](https://sepolia.etherscan.io/address/0x4e50f4aa92132bec49b59ac31bd360840b8a608c)
 -   **Chainlink Automation Upkeep:** [**View our "Aegis Sentinel" Live on Chainlink**](https://automation.chain.link/sepolia/52479053358607414262573789753157733136198557779381457305521613214336204719465)
     *(You can view the successful `Perform Upkeep` history here.)*
