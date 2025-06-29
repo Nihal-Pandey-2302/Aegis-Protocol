@@ -63,6 +63,8 @@ Aegis ensures reliable payouts with a fully-collateralized, on-chain Capital Poo
 
 ---
 
+---
+
 ## ⚙️ Tech Stack & Code
 
 | Layer                    | Tech                                                                 |
@@ -74,8 +76,20 @@ Aegis ensures reliable payouts with a fully-collateralized, on-chain Capital Poo
 | Frontend (for Demo)      | React (Vite), Ethers.js, Tailwind, Toast                             |
 | APIs                     | Reservoir API (floor price), Public RPCs                             |
 
--   **Backend Code:** The `AegisV3.sol` contract and the `checkOwner.js` sentinel script are in the `main` branch of this repository.
--   **Frontend Code:** The frontend used to interact with V3 is available on the **[`v3-upgrade` branch of our Frontend Repo](https://github.com/Nihal-Pandey-2302/aegis-frontend/tree/v3-upgrade)**.
+### Project Repositories
+
+This project is organized into two separate repositories for a clean separation of concerns:
+
+-**Latest V3 Contract:**[**AegisV3** on Etherscan](https://sepolia.etherscan.io/address/0xd2Ce8CAb8285EA661ea2C6490f0f8467A39f9673)
+
+-   **Backend & Protocol HQ (This Repo):** [Aegis-Protocol](https://github.com/Nihal-Pandey-2302/Aegis-Protocol)
+    -   Contains the `AegisV3.sol` smart contract and the core project documentation.
+
+-   **Frontend User Interface:** [aegis-frontend](https://github.com/Nihal-Pandey-2302/aegis-frontend)
+    -   The **`main`** branch powers the stable V2 live demo.
+    -   The **[`v3-upgrade` branch](https://github.com/Nihal-Pandey-2302/aegis-frontend/tree/v3-upgrade)** contains the most up-to-date code for interacting with our new `AegisV3` autonomous protocol.
+
+---
 
 ---
 
