@@ -12,9 +12,6 @@
 
 **The version of Aegis initially submitted was a complete, functional insurance dApp. Since then, our team has continued building at high velocity and deployed AegisV3, a significant architectural evolution.**
 
-We have transformed Aegis from a reactive dApp into a **proactive, autonomous risk-monitoring protocol** by integrating **Chainlink Automation** with **Chainlink Functions**.
-
--   **New "Autonomous Demo" Video:** **[Watch Aegis automatically detect a potential theft using our new multi-service architecture.](https://your-new-video-link.com)**
 -   **New Upgraded Contract (`AegisV3.sol`):** [View on Sepolia Etherscan - `0xd2Ce8CAb8285EA661ea2C6490f0f8467A39f9673`](https://sepolia.etherscan.io/address/0xd2Ce8CAb8285EA661ea2C6490f0f8467A39f9673)
 
 
