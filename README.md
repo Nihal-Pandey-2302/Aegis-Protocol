@@ -24,8 +24,12 @@ The entire Aegis V3 autonomous system is **live and operational on the Sepolia t
 ### **The Aegis Vision: Autonomous On-Chain Risk Management**
 
 Aegis solves the core problem of static, manual insurance by creating a protocol that **proactively monitors assets and automatically detects loss events.** The system uses **Chainlink Automation** as its "heartbeat" and **Chainlink Functions** as its "sentinel" to create a truly trustless risk management primitive.
+<div align="center">
+  <img src="https://github.com/Nihal-Pandey-2302/Aegis-Protocol/blob/main/Final%20Fowchart.png?raw=true" alt="Aegis Architecture Diagram" width="700"/>
+  <br/>
+  <em>Figure 1: High-level architecture of the Aegis</em>
+</div>
 
-![Architecture Diagram](https://github.com/Nihal-Pandey-2302/Aegis-Protocol/blob/main/Final%20Fowchart.png?raw=true)
 <!-- **Action:** Upload your new architecture diagram to a service like Imgur and paste the direct link here -->
 
 <details>
